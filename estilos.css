@@ -1,0 +1,478 @@
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.ct{
+  margin: 0px;
+  width: 33.3%;
+  height: 33.3%;
+  min-width: 250px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pt1{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0% 100%);
+  animation: 1.5s rotacion1 infinite  linear reverse;
+  z-index: 2;
+}
+.crcl1{
+  background: rgb(219, 255, 51);
+  width: 100%;
+  height: 100%;
+  clip-path: circle(50% at 50% 50%);
+}
+.crcl2{
+  background: white;
+  width: 200px;
+  height: 200px;
+  clip-path: circle(43.6% at 50% 50%);
+  position:absolute;
+  z-index: 3;
+}
+.pt2{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(100% 50%, 50% 50%, 50% 0, 100% 0);
+  z-index: 4;
+  animation: 1.8s rotacion1 infinite  linear;
+}
+.crcl3{
+  background: rgb(255, 87, 51);
+  width: 100%;
+  height: 100%;
+  clip-path: circle(50% at 50% 50%);
+}
+.crcl4{
+  background: white;
+  width: 150px;
+  height: 150px;
+  clip-path: circle(43.6% at 50% 50%);
+  position:absolute;
+  z-index: 5;
+}
+@keyframes rotacion1 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.pt2-1{
+  width: 300px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.774);
+}
+.pt2-2{
+  position: absolute;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: rgba(46, 204, 11);
+  animation: carga2 3s infinite linear;
+}
+@keyframes carga2 {
+  from{
+    clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+  }
+  to{
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+.box3{
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pt3-1{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion3 .5s infinite alternate ease;
+}
+.pt3-2{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion3 .5s infinite alternate ease .2s;
+}
+.pt3-3{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion3 .5s infinite alternate ease .4s;
+}
+@keyframes animacion3 {
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(-10px);
+  }
+}
+.box4{
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pt4-1{
+  width: 8px;
+  height: 20px;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion4 1.6s ease  infinite alternate;
+}
+.pt4-2{
+  width: 8px;
+  height: 20px;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion4 1.6s ease .7s infinite alternate;
+}
+.pt4-3{
+  width: 8px;
+  height: 20px;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion4 1.6s ease 1.4s infinite alternate;
+}
+.pt4-4{
+  width: 8px;
+  height: 20px;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion4 1.6s ease  2.1s infinite alternate;
+}
+@keyframes animacion4 {
+  from{
+    transform: scaleY(1);
+  }
+  to{
+    transform: scaleY(2);
+  }
+}
+.box5-1,.box5-2,.box5-3,.box5-4,.box5-5,.box5-6{
+  position: absolute;
+  height: 27px;
+  width:3px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box5-2{
+  transform: rotate(30deg);
+}
+.box5-3{
+  transform: rotate(60deg);
+}
+.box5-4{
+  transform: rotate(90deg);
+}
+.box5-5{
+  transform: rotate(120deg);
+}
+.box5-6{
+  transform: rotate(150deg);
+}
+.box5-1 div,.box5-2 div,.box5-3 div,.box5-4 div,.box5-5 div,.box5-6 div{
+  width: 3px;
+  height: 6px;
+  background-color: rgb(189, 189, 189);
+}
+.pt5-1-1{
+  animation:3s animacion5 infinite ease;
+}
+.pt5-2-1{
+  animation:3s animacion5 infinite ease .25s;
+}
+.pt5-3-1{
+  animation:3s animacion5 infinite ease .5s;
+}
+.pt5-4-1{
+  animation:3s animacion5 infinite ease .75s;
+}
+.pt5-5-1{
+  animation:3s animacion5 infinite ease 1s;
+}
+.pt5-6-1{
+  animation:3s animacion5 infinite ease 1.25s;
+}
+.pt5-1-2{
+  animation:3s animacion5 infinite ease 1.5s;
+}
+.pt5-2-2{
+  animation:3s animacion5 infinite ease 1.75s;
+}
+.pt5-3-2{
+  animation:3s animacion5 infinite ease 2s;
+}
+.pt5-4-2{
+  animation:3s animacion5 infinite ease 2.25s;
+}
+.pt5-5-2{
+  animation:3s animacion5 infinite ease 2.5s;
+}
+.pt5-6-2{
+  animation:3s animacion5 infinite ease 2.75s;
+}
+@keyframes animacion5 {
+  from{
+    background-color: rgb(44, 44, 44);
+  }
+  to{
+    background-color: rgb(189, 189, 189);
+  }
+}
+.box6-1,.box6-2,.box6-3,.box6-4,.box6-5,.box6-6{
+  position: absolute;
+  height: 40px;
+  width:5px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box6-2{
+  transform: rotate(30deg);
+}
+.box6-3{
+  transform: rotate(60deg);
+}
+.box6-4{
+  transform: rotate(90deg);
+}
+.box6-5{
+  transform: rotate(120deg);
+}
+.box6-6{
+  transform: rotate(150deg);
+}
+.box6-1 div,.box6-2 div,.box6-3 div,.box6-4 div,.box6-5 div,.box6-6 div{
+  width: 5px;
+  height: 5px;
+  background-color: rgba(128, 128, 128, 0.658);
+  border-radius: 50%;
+}
+.pt6-1-1{
+  animation:2.9s animacion6 infinite ease reverse;
+}
+.pt6-2-1{
+  animation:2.9s animacion6 infinite ease .25s reverse;
+}
+.pt6-3-1{
+  animation:2.9s animacion6 infinite ease .5s reverse;
+}
+.pt6-4-1{
+  animation:2.9s animacion6 infinite ease .75s reverse;
+}
+.pt6-5-1{
+  animation:2.9s animacion6 infinite ease 1s reverse;
+}
+.pt6-6-1{
+  animation:2.9s animacion6 infinite ease 1.25s reverse;
+}
+.pt6-1-2{
+  animation:2.9s animacion6 infinite ease 1.5s reverse;
+}
+.pt6-2-2{
+  animation:2.9s animacion6 infinite ease 1.75s reverse;
+}
+.pt6-3-2{
+  animation:2.9s animacion6 infinite ease 2s reverse;
+}
+.pt6-4-2{
+  animation:2.9s animacion6 infinite ease 2.25s reverse;
+}
+.pt6-5-2{
+  animation:2.9s animacion6 infinite ease 2.5s reverse;
+}
+.pt6-6-2{
+  animation:2.9s animacion6 infinite ease 2.75s reverse;
+}
+@keyframes animacion6 {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.8);
+  }
+}
+.box7{
+  width: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pt7-1{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion7 .7s infinite alternate ease;
+}
+.pt7-2{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion7 .7s infinite alternate ease .3s;
+}
+.pt7-3{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.658);
+  animation: animacion7 .7s infinite alternate ease .6s;
+}
+@keyframes animacion7 {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.5);
+  }
+}
+.box8{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: animacion8 2s ease infinite;
+}
+.box8-1{
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box8-2{
+  transform: rotate(90deg);
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pt8-1{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: gray;
+  position:absolute;
+  animation: pt1 1s infinite ease alternate;
+}
+.pt8-2{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: gray;
+  position:absolute;
+  animation: pt2 1s infinite ease alternate;
+}
+.pt8-3{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: gray;
+  position:absolute;
+  animation: pt3 1s infinite ease alternate;
+}
+.pt8-4{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: gray;
+  position:absolute;
+  animation: pt4 1s infinite ease alternate;
+}
+@keyframes pt1{
+  from{
+    transform: translateY(0px) scale(1);
+    background-color: rgba(128, 128, 128, 0.349);
+  }
+  to{
+    transform: translateY(18px) scale(1.4);
+    background-color: blueviolet;
+  }
+}
+@keyframes pt2{
+  from{
+    transform: translateY(0px) scale(1);
+    background-color: rgba(128, 128, 128, 0.349);
+  }
+  to{
+    transform: translateY(-19px) scale(1.4);
+    background-color: blue;
+  }
+}
+@keyframes pt3{
+  from{
+    transform: translateY(0px) scale(1);
+    background-color: rgba(128, 128, 128, 0.349);
+  }
+  to{
+    transform: translateY(18px) scale(1.4);
+    background-color: greenyellow;
+  }
+}
+@keyframes pt4{
+  from{
+    transform: translateY(0px) scale(1);
+    background-color: gray;
+  }
+  to{
+    transform: translateY(-19px) scale(1.4);
+    background-color: fuchsia;
+  }
+}
+@keyframes animacion8 {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.pt2-9{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(100% 50%, 50% 50%, 50% 0, 100% 0);
+  z-index: 4;
+  animation: 1.8s rotacion1 infinite  linear;
+}
+.crcl1-9{
+  background: linear-gradient(0deg, rgba(226,23,204,1) 0%, rgba(226,23,204,1) 26%, rgba(144,56,5,0) 100%);
+  width: 100%;
+  height: 100%;
+  clip-path: circle(50% at 50% 50%);
+}
+.crcl2-9{
+  background: white;
+  width: 150px;
+  height: 150px;
+  clip-path: circle(43.6% at 50% 50%);
+  position:absolute;
+  z-index: 5;
+}
